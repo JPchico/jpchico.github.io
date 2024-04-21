@@ -1,0 +1,19 @@
+.main-nav{
+    box-shadow: 0 0 15px rgb(35 35 35 /15%);
+    background-color: var(--bs-primary);
+    .head-user-container{
+        display: flex;
+        flex-direction: row;
+        .user-avatar{
+            margin-bottom: -4px;
+            width: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgb(35 35 35 /15%);
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+

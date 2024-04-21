@@ -1,0 +1,24 @@
+.global-footer{
+    width: -webkit-fill-available;
+    width: -moz-available;
+    margin-top: 10px;
+    background-color: var(--bs-primary);
+    position: absolute;
+    text-align: center;
+    .container{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between !important;
+        text-align: justify;
+        padding-top: 0.5rem;
+        .footer-list-item{
+            font-size: 0.75rem;
+            height: initial;
+            padding: 0.1rem;
+            
+            .footer-link{
+                text-decoration: none;
+            }
+        }
+    }
+}

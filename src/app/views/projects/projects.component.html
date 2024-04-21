@@ -1,0 +1,28 @@
+<div class="page-content">
+    <div class="projects-container">
+        @for(_project of projectsData; track _project){
+
+                <mat-card class="project-card bg-dark">
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{_project.title}}
+                        </mat-card-title>
+                    </mat-card-header>
+
+                    <div class="project-card-image-container">
+                        <img class="project-card-image" mat-card-image [src]="_project.image">
+                    </div>
+                    <mat-card-content class="project-card-content">
+                        <p>
+                            {{_project.short}}
+                        </p>
+                        <mat-icon mat-list-icon>terminal</mat-icon> {{_project.technologies}}
+
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button class="btn btn-primary btn-sm" mat-button> More information</button>
+                    </mat-card-actions>
+                </mat-card>
+        }
+    </div>
+</div>

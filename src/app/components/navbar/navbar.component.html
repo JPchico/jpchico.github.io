@@ -1,0 +1,12 @@
+<mat-toolbar class="main-nav" color="primary">    
+    <span class="head-user-container">
+        <a mat-button class="head-user-container" href="/">
+            <img src="assets/jonathan_chico_photo_small.jpg" class="user-avatar" alt="Jonathan Chico"> Jonathan Chico
+        </a>
+    </span>
+    <div class="spacer"></div>
+    @for(entry of menuData; track entry){
+        <a mat-button [href]="entry.route">{{entry.title}}</a>
+    }
+</mat-toolbar>
+
