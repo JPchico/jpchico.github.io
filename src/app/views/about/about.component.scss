@@ -64,3 +64,24 @@
     }
 
 }
+
+@media all and (min-width: 200px) and (max-width: 860px) {
+
+    .jumbotron-container{
+        display: flex;
+        flex-direction: column;
+        .display-4{
+            font-size: 2rem;
+        }
+        .lead{
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    .about-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

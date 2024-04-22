@@ -1,12 +1,33 @@
-<mat-toolbar class="main-nav" color="primary">    
-    <span class="head-user-container">
-        <a mat-button routerLinkActive="active" class="head-user-container" routerLink="/" [routerLinkActiveOptions]={exact:true}>
-            <img src="assets/jonathan_chico_photo_small.jpg" class="user-avatar" alt="Jonathan Chico"> Jonathan Chico
-        </a>
-    </span>
-    <div class="spacer"></div>
-    @for(entry of menuData; track entry){
-        <a mat-button routerLinkActive="active"  [routerLink]="entry.route">{{entry.title}}</a>
-    }
-</mat-toolbar>
+@if(!isPortable){
+    <mat-toolbar class="main-nav" color="primary">    
+        <span class="head-user-container">
+            <a mat-button routerLinkActive="active" class="head-user-container" routerLink="/" [routerLinkActiveOptions]={exact:true}>
+                <img src="assets/jonathan_chico_photo_small.jpg" class="user-avatar" alt="Jonathan Chico"> Jonathan Chico
+            </a>
+        </span>
+        <div class="spacer"></div>
+    
+            @for(entry of menuData; track entry){
+                <a mat-button routerLinkActive="active"  [routerLink]="entry.route">{{entry.title}}</a>
+            }
+    
+    </mat-toolbar>
+}
 
+@if(isPortable){
+    <mat-toolbar class="main-nav" color="primary">
+        <span class="head-user-container">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <img src="assets/jonathan_chico_photo_small.jpg" class="user-avatar" alt="Jonathan Chico"> Jonathan Chico
+            </button>
+            <mat-menu #menu>
+                <button mat-menu-item>
+                    <a mat-button class="head-user-container" routerLink="/">Home</a>
+                </button>
+                @for(entry of menuData; track entry){
+                    <button mat-menu-item><a mat-button [routerLink]="entry.route">{{entry.title}}</a></button>
+                }
+            </mat-menu>
+        </span>
+    </mat-toolbar>
+}

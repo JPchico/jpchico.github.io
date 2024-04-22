@@ -5,5 +5,11 @@
 @import "bootswatch/dist/darkly/bootswatch";
 
 
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: #f39c12; //progress bar color
+    --mdc-linear-progress-track-color: #775215; // background color
+}
