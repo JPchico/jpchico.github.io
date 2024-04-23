@@ -1,0 +1,43 @@
+<div class="page-content">
+    @if(!projectData.title){
+
+        <div class="alert alert-danger">
+            <h1 class="alert-heading">Ooops, it seems that you tried to find an non-existent project!</h1>
+            <button class="btn btn-dark"><a [routerLink]="'/projects'">Go back to the project dashboard</a></button>
+        </div>
+        
+    }
+    
+    @if(projectData.title){
+        <mat-card class="bg-dark project-card">
+            <mat-card-header>
+                <mat-card-title>
+                    {{projectData.title}}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    
+                </mat-card-subtitle>
+            </mat-card-header>
+            <div class="project-card-image-container">
+                <img class="project-card-image" mat-card-image [src]="projectData.image">
+            </div>
+            <mat-card-content class="project-card-content">
+                <mat-list>
+                    <mat-list-item>
+                        <span matListItemIcon class="list-entry"><fa-icon [icon]="terminalIcon"></fa-icon></span>
+                        <span matListItemLine class="list-entry">{{projectData.technologies}}</span>
+                        <span matListItemTitle class="list-entry"><b>Technologies</b></span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <span matListItemIcon class="list-entry"><fa-icon [icon]="gitHubIcon"></fa-icon></span>
+                        <span matListItemLine class="list-entry"><a [href]="projectData.link" target="_blank">{{projectData.link}}</a></span>
+                        <span matListItemTitle class="list-entry"><b>Project site</b></span>
+                    </mat-list-item>
+                </mat-list>
+                <p [innerHTML]="projectData.description"></p>
+            </mat-card-content>
+
+        </mat-card>
+    }
+
+</div>

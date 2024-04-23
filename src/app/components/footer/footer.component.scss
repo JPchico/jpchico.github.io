@@ -5,12 +5,19 @@
     background-color: var(--bs-primary);
     position: absolute;
     text-align: center;
+    padding-bottom: 1rem;
+
     .container{
         display: flex;
         align-items: baseline;
         justify-content: space-between !important;
         text-align: justify;
-        padding-top: 0.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        .footer-element-header{
+            margin-bottom: 0;
+        }
+
         .footer-list-item{
             font-size: 0.75rem;
             height: initial;

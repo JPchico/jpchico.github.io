@@ -1,7 +1,7 @@
 <footer class="global-footer">
     <div class="container">
         <div class="flex-child">
-            <h2>Contact</h2>
+            <h2 class="footer-element-header">Contact</h2>
             <mat-list dense>
                 @for(entry of contactList; track entry){
                     <mat-list-item class="footer-list-item"><a class="footer-link" [href]="entry.link"> {{entry.title}} <fa-icon [icon]="entry.icon"></fa-icon> </a></mat-list-item>
@@ -10,7 +10,7 @@
             </mat-list>
         </div>
         <div class="flex-child">
-            <h2>Profiles</h2>
+            <h2 class="footer-element-header">Profiles</h2>
             <mat-list dense>
                 @for(entry of profileList; track entry){
                     <mat-list-item class="footer-list-item"><a class="footer-link" [href]="entry.link"> {{entry.title}} <fa-icon [icon]="entry.icon"></fa-icon> </a></mat-list-item>
@@ -20,5 +20,5 @@
         <div class="flex-child"></div>
     </div>
 
-    <span>Copyright <fa-icon [icon]="copyrightSymbol"></fa-icon> {{date.getFullYear()}} Jonathan Chico</span>
+    <span class="copyright-notice">Copyright <fa-icon [icon]="copyrightSymbol"></fa-icon> {{date.getFullYear()}} Jonathan Chico</span>
 </footer>

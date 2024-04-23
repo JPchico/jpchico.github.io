@@ -1,40 +1,41 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import {ProgressBarMode, MatProgressBarModule} from '@angular/material/progress-bar';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SkillsData } from '../../data_model/skills-data';
+import { faAtom, faMagnifyingGlassChart, faPersonChalkboard, faTerminal } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [MatCardModule, MatListModule, MatProgressBarModule],
+  imports: [MatCardModule, MatListModule,FontAwesomeModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
 
-  skillList: any = []
+  skillList: SkillsData[] =[
+    {
+      title: 'Software Development',
+      icon: faTerminal,
+      description: 'Extensive experience in software development, full stack development in python, using tools like fastAPI, sqlachemy and Dash by plotly. Developed several applications using Angular/Typescript to handle both theoretical data as well as data from SCADA systems. Wide experience in Fortran programming with OpenMP/MPI frameworks, as well as experience in C/C++, bash and frameworks such as Terraform and Ansible. Deployed, maintained and configured numerous Linux based clustes in Azure to perform numerical simulations at HPC level.'
+    },
+    {
+      title: 'Materials Science',
+      icon: faAtom,
+      description: 'Extensive experience in the modeling of materials properties from first principles, using state of the art codes such as Quantum Espresso, VASP, SPRKKR and JUKKR. Wide experience in multi-scale modeling, stastistical analysis and magnetization dynamics.'
+    },
+    {
+      title: 'Data analysis',
+      icon: faMagnifyingGlassChart,
+      description: 'Proficient in data analysis of complex systems from both simulation data as well as sensor data. Experienced with python packages such as numpy, scipy and pandas for data analysis as well as bash scripting tools such as awk, sed and grep for data handling and extraction. Wide experience in SQL (PostgreSQL, MySQL) and Databricks (spark). Proficient with data visualization tools like matplotlib, plotly and VTK.'
+    },
+    {
+      title: 'Communication',
+      icon: faPersonChalkboard,
+      description: 'Given talks in scientific conferences as well university level lectures on diverse topics, with audiences varying from just a couple of people to more than a hundred in attendence.'
+    }
+  ]
 
-  ngOnInit(): void {
-
-    this.skillList = [
-      {
-        title: 'Programing',
-        level: 75,
-      },
-      {
-        title: 'Materials Science',
-        level: 80
-      },
-      {
-        title: 'Data analysis',
-        level: 75
-      },
-      {
-        title: 'Communication',
-        level: 85
-      }
-    ]
-
-  }
 
 }
