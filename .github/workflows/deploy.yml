@@ -1,0 +1,37 @@
+name: deploy
+
+on:
+  push:
+    branches: [master]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version:  "18"
+          cache: "npm"
+      
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: dist/jpchico.github.io/browser
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
