@@ -4,11 +4,12 @@ import { MatListModule } from '@angular/material/list';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SkillsData } from '../../data_model/skills-data';
 import { faAtom, faMagnifyingGlassChart, faPersonChalkboard, faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [MatCardModule, MatListModule,FontAwesomeModule],
+  imports: [MatCardModule, MatListModule,FontAwesomeModule, RouterModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
@@ -18,12 +19,7 @@ export class AboutComponent {
     {
       title: 'Software Development',
       icon: faTerminal,
-      description: 'Extensive experience in software development, full stack development in python, using tools like fastAPI, sqlachemy and Dash by plotly. Developed several applications using Angular/Typescript to handle both theoretical data as well as data from SCADA systems. Wide experience in Fortran programming with OpenMP/MPI frameworks, as well as experience in C/C++, bash and frameworks such as Terraform and Ansible. Deployed, maintained and configured numerous Linux based clustes in Azure to perform numerical simulations at HPC level.'
-    },
-    {
-      title: 'Materials Science',
-      icon: faAtom,
-      description: 'Extensive experience in the modeling of materials properties from first principles, using state of the art codes such as Quantum Espresso, VASP, SPRKKR and JUKKR. Wide experience in multi-scale modeling, stastistical analysis and magnetization dynamics.'
+      description: 'Extensive experience in software development, full stack development in Python, using tools like fastAPI, sqlachemy and Dash by plotly. Developed several applications using Angular/Typescript to handle both theoretical data as well as data from SCADA systems. Wide experience in Fortran programming with OpenMP/MPI frameworks, as well as experience in C/C++, bash and frameworks such as Terraform and Ansible. Deployed, maintained and configured numerous Linux based clusters in Azure to perform numerical simulations at HPC level.'
     },
     {
       title: 'Data analysis',
@@ -33,8 +29,13 @@ export class AboutComponent {
     {
       title: 'Communication',
       icon: faPersonChalkboard,
-      description: 'Given talks in scientific conferences as well university level lectures on diverse topics, with audiences varying from just a couple of people to more than a hundred in attendence.'
-    }
+      description: 'Given talks in scientific conferences as well university level lectures on diverse topics, with audiences varying from just a couple of people to more than a hundred in attendance.'
+    },
+    {
+      title: 'Scientific knowledge',
+      icon: faAtom,
+      description: 'Extensive experience in the modeling of physical processes form first-principles, multi-scale modeling, statistical analysis and  simulations. Experience working in interdisciplinary and diverse groups and in collaborating to solve complex problems. Specialization in materials science using and developing methods and simulation tools to determine material properties.'
+    },
   ]
 
 

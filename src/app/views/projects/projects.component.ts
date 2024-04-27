@@ -21,11 +21,11 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   subscription!: Subscription;
 
-  constructor(private projectDataSerive: ProjectDataShareService) { }
+  constructor(private projectDataService: ProjectDataShareService) { }
 
   ngOnInit(): void {
 
-    this.subscription = this.projectDataSerive.currentMessage.subscribe(message => this.projectsData = message)
+    this.subscription = this.projectDataService.currentMessage.subscribe(message => this.projectsData = message)
 
   }
 

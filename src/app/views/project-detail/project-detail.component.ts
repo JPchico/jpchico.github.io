@@ -28,7 +28,7 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   terminalIcon: IconProp = faTerminal
 
   constructor(
-    private projectDataSerive: ProjectDataShareService,
+    private projectDataService: ProjectDataShareService,
     private route: ActivatedRoute
   ) { }
 
@@ -36,7 +36,7 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
 
     this.projectName = this.route.snapshot.paramMap.get('id')
 
-    this.subscription = this.projectDataSerive.currentMessage.subscribe(message => {
+    this.subscription = this.projectDataService.currentMessage.subscribe(message => {
       let _data = message.filter(item => item.title === this.projectName)[0]
 
       if (_data){
