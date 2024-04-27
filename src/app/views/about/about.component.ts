@@ -19,7 +19,7 @@ export class AboutComponent {
     {
       title: 'Software Development',
       icon: faTerminal,
-      description: 'Extensive experience in software development, full stack development in Python, using tools like fastAPI, sqlachemy and Dash by plotly. Developed several applications using Angular/Typescript to handle both theoretical data as well as data from SCADA systems. Wide experience in Fortran programming with OpenMP/MPI frameworks, as well as experience in C/C++, bash and frameworks such as Terraform and Ansible. Deployed, maintained and configured numerous Linux based clusters in Azure to perform numerical simulations at HPC level.'
+      description: 'Extensive experience in software development, full stack development in Python, using tools like fastAPI, sqlalchemy and Dash by plotly. Developed several applications using Angular/Typescript to handle both theoretical data as well as data from SCADA systems. Wide experience in Fortran programming with OpenMP/MPI frameworks, as well as experience in C/C++, bash and frameworks such as Terraform and Ansible. Deployed, maintained and configured numerous Linux based clusters in Azure to perform numerical simulations at HPC level.'
     },
     {
       title: 'Data analysis',
